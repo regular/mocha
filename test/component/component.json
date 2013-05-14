@@ -1,0 +1,13 @@
+{
+  "name": "mocha-component-exports-test",
+  "description": "mocha's exports interface with components require implementation",
+  "paths": [
+    "../../../"
+  ],
+  "local": [
+    "mocha"
+  ],
+  "scripts": [
+    "array.js"
+  ]
+}

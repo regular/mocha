@@ -35,6 +35,9 @@ test: test-unit
 
 test-all: test-bdd test-tdd test-qunit test-exports test-unit test-grep test-jsapi test-compilers
 
+test-component:
+	cd test/component && component build
+
 test-jsapi:
 	@node test/jsapi
 
