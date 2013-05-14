@@ -2,7 +2,7 @@
 REPORTER ?= dot
 TM_DEST = ~/Library/Application\ Support/TextMate/Bundles
 TM_BUNDLE = JavaScript\ mocha.tmbundle
-SRC = _mocha.js $(shell find lib -name "*.js" -type f | sort)
+SRC = $(shell find lib -name "*.js" -type f | sort)
 SUPPORT = $(wildcard support/*.js)
 
 all: mocha.js
@@ -35,8 +35,8 @@ test: test-unit
 
 test-all: test-bdd test-tdd test-qunit test-exports test-unit test-grep test-jsapi test-compilers
 
-test-component:
-	cd test/component && component build
+test-component: mocha.js test/component/component.json test/component/array.js
+	cd test/component && component install && component build
 
 test-jsapi:
 	@node test/jsapi

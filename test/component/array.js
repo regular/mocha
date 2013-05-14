@@ -1,3 +1,4 @@
+require("chai").should()
 
 var calls = [];
 

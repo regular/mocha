@@ -7,6 +7,9 @@
   "local": [
     "mocha"
   ],
+  "dependencies": {
+    "virtru-components/chai": "*"
+  },
   "scripts": [
     "array.js"
   ]
